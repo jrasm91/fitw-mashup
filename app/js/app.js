@@ -15,9 +15,11 @@ cs462App.config(['$routeProvider',
 		$routeProvider.
 		when('/account', {
 			templateUrl: 'partials/account.html',
+			controller: 'MainCtrl'
 		}).
 		otherwise({
 			templateUrl: 'partials/home.html',
+			controller: 'MainCtrl'
 		})
 	}
 ]);
