@@ -16,15 +16,6 @@ module.exports = {
 		})
 	},
 
-	create: function(req, res, next) {
-		User.create(req.body.user, function(err, result) {
-			if (err)
-				next(err);
-			else
-				res.send(200, result);
-		})
-	},
-
 	getAll: function(req, res, next) {
 		User.getAll(function(err, users) {
 			if (err) {
@@ -52,7 +43,7 @@ module.exports = {
 		API.instagram(foursquare_id, function(insta_err, photos){
 			API.wikipedia(term, function(wiki_err, info){
 				API.twitter(term, function(twitter_err, tweets){
-					User.findOrCreate({ 
+					User.upsert({ 
 						id: user_id, 
 						firstName : firstName,
 						lastName : lastName,
