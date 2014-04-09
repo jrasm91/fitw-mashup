@@ -36,7 +36,8 @@
  			id : user.id,
  			photo : user.photo || "",
  			firstName : user.firstName || "",
- 			lastName : user.lastName || ""
+ 			lastName : user.lastName || "",
+            checkin : user.checkin
  		};
  		openFile(function(err, users) {
  			if (err) {
