@@ -23,7 +23,7 @@ module.exports = {
 			} else {
 				res.send(200, users);
 			}
-		})
+		});
 	},
 
 	logout: function(req, res, next) {
@@ -33,7 +33,6 @@ module.exports = {
 	},
 
 	push: function(req, res, next) {
-
 		var obj = JSON.parse(req.body.checkin);
 		var user_id = obj.user.id;
 		var foursquare_id = obj.venue.id;
@@ -53,7 +52,11 @@ module.exports = {
 							wikipedia: info,
 							tweets: tweets
 						}
-					}, function(){});
+					}, function(err){
+						if (err) {
+							console.log(err);
+						}
+					});
 					console.log('Push: ', term);
 				});
 			});

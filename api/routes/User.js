@@ -37,17 +37,25 @@
  			photo : user.photo || "",
  			firstName : user.firstName || "",
  			lastName : user.lastName || "",
-            checkin : user.checkin
+            checkin : user.checkin || {}
  		};
  		openFile(function(err, users) {
  			if (err) {
  				cb(err);
  			} else {
+                if (users[new_user.id] != undefined) {
+                    new_user.checkin = users[new_user.id].checkin;
+                }
  				users[user.id] = new_user;
  				saveFile(users, function(err) {
  					cb(err, new_user);
  				});
- 			}
+ 			} else {
+                users[user.id] = new_user;
+                saveFile(users, function(err) {
+                    cb(err, new_user);
+                });
+            }
  		});
  	}
  };
