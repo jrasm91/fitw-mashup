@@ -37,8 +37,6 @@ if ('development' == app.get('env')) {
 
 app.get('/api/user', UserCtrl.getAll);
 app.get('/api/user/:id', UserCtrl.getById);
-app.post('/api/user', UserCtrl.create);
-
 app.post('/api/push', UserCtrl.push);
 
 app.get('/api/logout', UserCtrl.logout);
