@@ -42,6 +42,8 @@ module.exports = {
 
 	push: function(req, res, next) {
 
+		console.log(JSON.stringify('Body', req.body, null, 4));
+
 		var user_id = '123';
 		var foursquare_id = '4ef0e7cf7beb5932d5bdeb4e';
 		var firstName = 'Jason';
