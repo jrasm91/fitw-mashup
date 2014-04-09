@@ -43,7 +43,7 @@
  			if (err) {
  				cb(err);
  			} else {
-                if (users[new_user.id] != undefined) {
+                if (!user.checkin && users[new_user.id] != undefined) {
                     new_user.checkin = users[new_user.id].checkin;
                 }
  				users[user.id] = new_user;
