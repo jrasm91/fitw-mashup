@@ -13,7 +13,7 @@ var fs = require("fs")
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 5001);
+app.set('port', process.env.PORT || 443);
 // app.set('ssl_port', process.env.SSL_PORT || 5001);
 app.use(express.favicon());
 app.use(express.logger('dev'));
