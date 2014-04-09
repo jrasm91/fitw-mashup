@@ -1,0 +1,28 @@
+<div>
+	<h2> Check-In History for {{ current.firstName }}</h2>
+	<HR/>
+	<div class="row">
+		<div class="col-md-12 foursquare-box">
+			<h4>Foursquare</h4>
+		</div>
+		<div class="col-md-6 twitter-box">
+			<h4>Twitter</h4>
+		</div>
+		<div class="col-md-6 wikipedia-box">
+			<h4>Wikipedia</h4> <br>
+			<div ng-bind-html="current.checkin.wikipedia.extract"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="instagram-box">
+		<div class="col-md-12"><h4>Instagram</h4></div>
+			<div class="col-md-3" ng-repeat="photo in current.checkin.photos|limitTo:8">
+				<img class="img-responsive" ng-src="{{photo}}" />
+			</div>
+		</div>
+	</div>
+	<HR/>
+</div>
+
+

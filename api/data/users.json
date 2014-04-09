@@ -1,0 +1,437 @@
+{
+    "77574657": {
+        "id": "77574657",
+        "firstName": "Erin",
+        "gender": "male",
+        "relationship": "self",
+        "photo": "https://foursquare.com/img/blank_boy.png",
+        "friends": {
+            "count": 0,
+            "groups": [
+                {
+                    "type": "friends",
+                    "name": "Mutual friends",
+                    "count": 0,
+                    "items": []
+                },
+                {
+                    "type": "others",
+                    "name": "Other friends",
+                    "count": 0,
+                    "items": []
+                }
+            ]
+        },
+        "tips": {
+            "count": 0
+        },
+        "lists": {
+            "groups": [
+                {
+                    "type": "created",
+                    "count": 1,
+                    "items": []
+                }
+            ]
+        },
+        "homeCity": "Pleasant Grove, UT",
+        "bio": "",
+        "contact": {
+            "email": "erin.rasmussen@comcast.net"
+        },
+        "checkinPings": "off",
+        "pings": false,
+        "type": "user",
+        "badges": {
+            "count": 1,
+            "items": [
+                {
+                    "id": "52eaecec498e1177871b418d",
+                    "badgeId": "4c4f08667a0803bbaa202ab7",
+                    "name": "Newbie",
+                    "unlockMessage": "You unlocked the Newbie badge!",
+                    "description": "Your first check-in! Foursquare keeps track of your adventures and milestones, like visiting five new sushi spots or galleries. And with every check-in, we learn about what you like and can give you better recommendations.",
+                    "badgeText": "Your first check-in! Foursquare keeps track of your adventures and milestones, like visiting five new sushi spots or galleries. And with every check-in, we learn about what you like and can give you better recommendations.",
+                    "image": {
+                        "prefix": "https://playfoursquare.s3.amazonaws.com/badge/",
+                        "sizes": [
+                            57,
+                            114,
+                            200,
+                            300,
+                            400
+                        ],
+                        "name": "/newbie.png"
+                    },
+                    "unlocks": [
+                        {
+                            "checkins": [
+                                {
+                                    "id": "52eaecec498e1177871b418a",
+                                    "createdAt": 1391127788,
+                                    "type": "checkin",
+                                    "timeZone": "America/Denver",
+                                    "timeZoneOffset": -420,
+                                    "venue": {
+                                        "id": "4b06bd86f964a5206bef22e3",
+                                        "name": "Harold B Lee Library",
+                                        "contact": {
+                                            "phone": "8014222927",
+                                            "formattedPhone": "(801) 422-2927"
+                                        },
+                                        "location": {
+                                            "address": "Brigham Young University",
+                                            "lat": 40.248497316604144,
+                                            "lng": -111.64935350418091,
+                                            "postalCode": "84602",
+                                            "cc": "US",
+                                            "city": "Provo",
+                                            "state": "UT",
+                                            "country": "United States"
+                                        },
+                                        "categories": [
+                                            {
+                                                "id": "4bf58dd8d48988d1a7941735",
+                                                "name": "College Library",
+                                                "pluralName": "College Libraries",
+                                                "shortName": "Library",
+                                                "icon": {
+                                                    "prefix": "https://ss1.4sqi.net/img/categories/building/library_",
+                                                    "sizes": [
+                                                        32,
+                                                        44,
+                                                        64,
+                                                        88,
+                                                        256
+                                                    ],
+                                                    "name": ".png"
+                                                },
+                                                "primary": true
+                                            }
+                                        ],
+                                        "verified": false,
+                                        "stats": {
+                                            "checkinsCount": 3124,
+                                            "usersCount": 488,
+                                            "tipCount": 10
+                                        },
+                                        "likes": {
+                                            "count": 0,
+                                            "groups": []
+                                        },
+                                        "beenHere": {
+                                            "count": 0
+                                        }
+                                    },
+                                    "likes": {
+                                        "count": 0,
+                                        "groups": []
+                                    },
+                                    "photos": {
+                                        "count": 0,
+                                        "items": []
+                                    },
+                                    "posts": {
+                                        "count": 0,
+                                        "textCount": 0
+                                    },
+                                    "comments": {
+                                        "count": 0,
+                                        "items": []
+                                    },
+                                    "source": {
+                                        "name": "foursquare for Android",
+                                        "url": "https://foursquare.com/download/#/android"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "mayorships": {
+            "count": 0,
+            "items": []
+        },
+        "checkins": {
+            "count": 2,
+            "items": [
+                {
+                    "id": "52eaedc711d27f978d681fee",
+                    "createdAt": 1391128007,
+                    "type": "checkin",
+                    "timeZone": "America/Denver",
+                    "timeZoneOffset": -420,
+                    "venue": {
+                        "id": "4b5f573ff964a520ffb429e3",
+                        "name": "Brigham Young University",
+                        "contact": {
+                            "phone": "8014224636",
+                            "formattedPhone": "(801) 422-4636",
+                            "twitter": "byu"
+                        },
+                        "location": {
+                            "address": "1 N University Ave",
+                            "lat": 40.25083926655025,
+                            "lng": -111.64926767349243,
+                            "postalCode": "84602",
+                            "cc": "US",
+                            "city": "Provo",
+                            "state": "UT",
+                            "country": "United States"
+                        },
+                        "categories": [
+                            {
+                                "id": "4bf58dd8d48988d1ae941735",
+                                "name": "University",
+                                "pluralName": "Universities",
+                                "shortName": "University",
+                                "icon": {
+                                    "prefix": "https://ss1.4sqi.net/img/categories/education/default_",
+                                    "sizes": [
+                                        32,
+                                        44,
+                                        64,
+                                        88,
+                                        256
+                                    ],
+                                    "name": ".png"
+                                },
+                                "primary": true
+                            }
+                        ],
+                        "verified": false,
+                        "stats": {
+                            "checkinsCount": 6406,
+                            "usersCount": 1377,
+                            "tipCount": 18
+                        },
+                        "url": "http://www.byu.edu",
+                        "likes": {
+                            "count": 17,
+                            "groups": [
+                                {
+                                    "type": "others",
+                                    "count": 17,
+                                    "items": []
+                                }
+                            ],
+                            "summary": "17 likes"
+                        },
+                        "like": false,
+                        "menu": {
+                            "type": "Menu",
+                            "label": "Menu",
+                            "anchor": "View Menu",
+                            "url": "https://foursquare.com/v/brigham-young-university/4b5f573ff964a520ffb429e3/menu",
+                            "mobileUrl": "https://foursquare.com/v/4b5f573ff964a520ffb429e3/device_menu"
+                        },
+                        "beenHere": {
+                            "count": 1,
+                            "marked": true
+                        },
+                        "listed": {
+                            "groups": [
+                                {
+                                    "type": "dones",
+                                    "count": 1,
+                                    "items": []
+                                }
+                            ]
+                        }
+                    },
+                    "likes": {
+                        "count": 0,
+                        "groups": []
+                    },
+                    "like": false,
+                    "photos": {
+                        "count": 0,
+                        "items": []
+                    },
+                    "posts": {
+                        "count": 0,
+                        "textCount": 0
+                    },
+                    "comments": {
+                        "count": 0,
+                        "items": []
+                    },
+                    "source": {
+                        "name": "foursquare for Android",
+                        "url": "https://foursquare.com/download/#/android"
+                    }
+                }
+            ]
+        },
+        "following": {
+            "count": 0
+        },
+        "requests": {
+            "count": 0
+        },
+        "todos": {
+            "count": 0
+        },
+        "photos": {
+            "count": 0,
+            "items": []
+        },
+        "scores": {
+            "recent": 11,
+            "max": 11,
+            "goal": 50,
+            "checkinsCount": 2
+        },
+        "createdAt": 1391126249,
+        "referralId": "u-77574657"
+    },
+    "77959704": {
+        "id": "77959704",
+        "firstName": "Brian",
+        "lastName": "Rasmussen",
+        "gender": "male",
+        "checkins": {
+            "count": 0,
+            "items": [
+                "abc5",
+                "def5",
+                "ghi5"
+            ]
+        }
+    },
+    "77959705": {
+        "id": "77959705",
+        "firstName": "Jason",
+        "lastName": "Rasmussen",
+        "gender": "male",
+        "relationship": "self",
+        "photo": "https://is1.4sqi.net/userpix_thumbs/77959705-FKCIRYRY1GRDMGIK.jpg",
+        "friends": {
+            "count": 0,
+            "groups": [
+                {
+                    "type": "friends",
+                    "name": "Mutual friends",
+                    "count": 0,
+                    "items": []
+                },
+                {
+                    "type": "others",
+                    "name": "Other friends",
+                    "count": 0,
+                    "items": []
+                }
+            ]
+        },
+        "tips": {
+            "count": 0
+        },
+        "lists": {
+            "groups": [
+                {
+                    "type": "created",
+                    "count": 1,
+                    "items": []
+                }
+            ]
+        },
+        "homeCity": "Hong Kong",
+        "bio": "",
+        "contact": {
+            "email": "jrasm91@gmail.com",
+            "facebook": "580816190"
+        },
+        "checkinPings": "off",
+        "pings": false,
+        "type": "user",
+        "badges": {
+            "count": 0,
+            "items": []
+        },
+        "mayorships": {
+            "count": 0,
+            "items": []
+        },
+        "checkins": {
+            "count": 0,
+            "items": [
+                "abc",
+                "def",
+                "ghi"
+            ]
+        },
+        "following": {
+            "count": 0
+        },
+        "requests": {
+            "count": 0
+        },
+        "todos": {
+            "count": 0
+        },
+        "photos": {
+            "count": 0,
+            "items": []
+        },
+        "createdAt": 1391461154,
+        "referralId": "u-77959705"
+    },
+    "77959706": {
+        "id": "77959706",
+        "firstName": "Bobman",
+        "lastName": "Rasmussen",
+        "gender": "male",
+        "checkins": {
+            "count": 0,
+            "items": [
+                "abc1",
+                "def1",
+                "ghi1"
+            ]
+        }
+    },
+    "77959707": {
+        "id": "77959707",
+        "firstName": "Pocof",
+        "lastName": "Rasmussen",
+        "gender": "male",
+        "checkins": {
+            "count": 0,
+            "items": [
+                "abc2",
+                "def2",
+                "ghi2"
+            ]
+        }
+    },
+    "77959708": {
+        "id": "77959708",
+        "firstName": "Schmo",
+        "lastName": "Rasmussen",
+        "gender": "male",
+        "checkins": {
+            "count": 0,
+            "items": [
+                "abc3",
+                "def3",
+                "ghi3"
+            ]
+        }
+    },
+    "77959709": {
+        "id": "77959709",
+        "firstName": "Alex",
+        "lastName": "Rasmussen",
+        "gender": "male",
+        "checkins": {
+            "count": 0,
+            "items": [
+                "abc4",
+                "def4",
+                "ghi4"
+            ]
+        }
+    }
+}
