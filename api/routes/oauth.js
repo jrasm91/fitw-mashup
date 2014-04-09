@@ -25,7 +25,6 @@ passport.use(new FoursquareStrategy({
 			var prot = https;
 			var req = prot.request(options, function(res) {
 				var output = '';
-				console.log(options.host + ':' + res.statusCode);
 				res.setEncoding('utf8');
 				res.on('data', function(chunk) {
 					output += chunk;
@@ -52,7 +51,6 @@ passport.use(new FoursquareStrategy({
 		};
 
 		getJSON(options, function(err, json) {
-			console.log(json);
 			User.findOrCreate(profile._json.response.user, done);
 		})
 

@@ -44,7 +44,7 @@ module.exports = {
 },
 
 wikipedia: function(term, callback){
-    var url = 'http://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exchars=300&exintro=&titles=' + term
+    var url = 'http://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exchars=300&exintro=&titles=' + term + '&redirects'
     request(url, function(error, response, body) {        
         if (!error && response.statusCode == 200) {
             var obj = JSON.parse(body);
