@@ -12,7 +12,7 @@ var twit = new twitter({
 
 
 module.exports = {
-    instagram: function(foursquare_id, callback){
+    instagram: function(foursquare_id, cb){
         var url1 = 'https://api.instagram.com/v1/locations/search?client_id=db6619a8d43a4be09d4c7e4fb4e652e4&foursquare_v2_id=' + foursquare_id;
         request(url1, function(error, response, body) {        
             if (!error && response.statusCode == 200) {
@@ -26,58 +26,51 @@ module.exports = {
                             links.push(obj.data[i].images.low_resolution.url);
                         }
                         console.log(links);
-                        callback(null, links);
+                        cb(null, links);
                     } else {
-                        console.log('ERROR: [' + response.statusCode + ']' + url2);
-                        callback(response.statusCode);
+                        cb(response.statusCode);
                     }
                 });
             } else {
-                console.log('ERROR: [' + response.statusCode + ']' + url1);
-                callback(response.statusCode);
+                cb(response.statusCode);
+            }
+        })
+    },
+
+    wikipedia: function(term, cb){
+        var url = 'http://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exchars=300&exintro=&titles=' + term + '&redirects'
+        request(url, function(error, response, body) {        
+            if (!error && response.statusCode == 200) {
+                var obj = JSON.parse(body);
+                var number = Object.keys(obj.query.pages)[0];
+                var result = obj.query.pages[number];
+                console.log(result);
+                cb(null, result);
+            } else {
+                cb(response.statusCode);
             }
         });
+    },
 
-
-
-
-},
-
-wikipedia: function(term, callback){
-    var url = 'http://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exchars=300&exintro=&titles=' + term + '&redirects'
-    request(url, function(error, response, body) {        
-        if (!error && response.statusCode == 200) {
-            var obj = JSON.parse(body);
-            var number = Object.keys(obj.query.pages)[0];
-            var result = obj.query.pages[number];
-            console.log(result);
-            callback(null, result);
-        } else {
-            console.log('ERROR: [' + response.statusCode + ']' + url);
-            callback(response.statusCode);
-        }
-    });
-},
-
-twitter: function(term, callback){
-    twit.search(term, function(data) {
-        var tweets = []
-        var data = data.statuses
-        for (var i in data){
-            if(i >= 8){
-                break;
-            }
-            var tweet = data[i]
-            tweets.push({
-                text: tweet.text,
-                user: {
-                    name: tweet.user.name,
-                    screen_name: tweet.user.screen_name,
-                    profile_image_url: tweet.user.profile_image_url
+    twitter: function(term, cb){
+        twit.search(term, function(data) {
+            var tweets = []
+            var data = data.statuses
+            for (var i in data){
+                if(i >= 8){
+                    break;
                 }
-            });
-        }
-        callback(null, tweets)
-    });
-}
+                var tweet = data[i]
+                tweets.push({
+                    text: tweet.text,
+                    user: {
+                        name: tweet.user.name,
+                        screen_name: tweet.user.screen_name,
+                        profile_image_url: tweet.user.profile_image_url
+                    }
+                });
+            }
+            cb(null, tweets)
+        });
+    }
 }
