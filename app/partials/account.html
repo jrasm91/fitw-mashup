@@ -1,28 +1,62 @@
-<div>
-	<h2> Check-In History for {{ current.firstName }}</h2>
-	<HR/>
-	<div class="row">
-		<div class="col-md-12 foursquare-box">
-			<h4>Foursquare</h4>
-		</div>
-		<div class="col-md-6 twitter-box">
-			<h4>Twitter</h4>
-		</div>
-		<div class="col-md-6 wikipedia-box">
-			<h4>Wikipedia</h4> <br>
-			<div ng-bind-html="current.checkin.wikipedia.extract"></div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="instagram-box">
-		<div class="col-md-12"><h4>Instagram</h4></div>
-			<div class="col-md-3" ng-repeat="photo in current.checkin.photos|limitTo:8">
-				<img class="img-responsive" ng-src="{{photo}}" />
+	<div>
+		<h2> Check-In History for {{ current.firstName }}</h2>
+		<HR/>
+		<div class="row">
+			<div class="col-md-12 foursquare-box">
+				<div class="col-md-12"><h4>Foursquare</h4></div>
+			</div>
+			<div class="col-md-6 twitter-box">
+				<div class="col-md-12"><h4>Twitter</h4></div>
+				<div ng-repeat="tweet in current.checkin.tweets|limitTo:3">
+					<div class="row">
+						<div class="col-md-2">
+							<img class="img-responsive" ng-src="{{tweet.user.profile_image_url}}" />
+						</div>
+						<div class="col-md-10" style="padding: 5px">
+							<p2>{{ tweet.user.name}}(@{{tweet.user.screen_name}}): {{tweet.text}}</p2><br>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 wikipedia-box">
+				<div class="col-md-12"><h4>Wikipedia</h4></div>
+				<div class="col-md-12">
+					<div ng-bind-html="current.checkin.wikipedia.extract"></div>
+				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-md-12 instagram-box">
+				<div class="col-md-12"><h4>Instagram</h4></div>
+				<div class="col-md-2" ng-repeat="photo in current.checkin.photos|limitTo:6">
+					<img class="img-responsive" ng-src="{{photo}}" />
+				</div>
+			</div>
+		</div>
+			<!-- <div class="col-md-6"><h4>Twitter</h4></div>
+			<div class="row" ng-repeat="tweet in current.checkin.tweets|limitTo:8">
+				<div class="col-md-2">
+					<img class="img-responsive" ng-src="{{tweet.user.profile_image_url}}" />
+				</div>
+				<div class="col-md-4">
+					<p2>{{ tweet.user.name }}</p2>
+				</div>
+			</div>
+			<div class="col-md-6 wikipedia-box">
+				<h4>Wikipedia</h4> <br>
+				<div ng-bind-html="current.checkin.wikipedia.extract"></div>
+			</div> -->
+		<!-- </div>
+		<div class="row">
+			<div class="instagram-box">
+				<div class="col-md-12"><h4>Instagram</h4></div>
+				<div class="col-md-2" ng-repeat="photo in current.checkin.photos|limitTo:8">
+					<img class="img-responsive" ng-src="{{photo}}" />
+				</div>
+			</div>
+		</div>
+		<HR/> -->
 	</div>
-	<HR/>
 </div>
 
 

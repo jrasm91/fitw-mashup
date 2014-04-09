@@ -3,7 +3,7 @@
 */
 
 var User = require('./User');
-var request = require('request');
+var API = require('./API');
 
 module.exports = {
 
@@ -41,57 +41,31 @@ module.exports = {
 	},
 
 	push: function(req, res, next) {
-		var instagram = function(location_id, callback){
-			var url = 'https://api.instagram.com/v1/locations/' + location_id + '/media/recent?client_id=db6619a8d43a4be09d4c7e4fb4e652e4'
-			request(url, function(error, response, body) {        
-				if (!error && response.statusCode == 200) {
-					var obj = JSON.parse(body);
-					var links = [];
-					for (var i in obj.data){
-						links.push(obj.data[i].images.low_resolution.url);
-					}
-					callback(null, links);
-				} else {
-					console.log('ERROR: [' + response.statusCode + ']' + url);
-					callback(response.statusCode);
-				}
-			});
-		}
-
-		var wikipedia = function(term, callback){
-			var url = 'http://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exchars=300&exintro=&titles=' + term
-			request(url, function(error, response, body) {        
-				if (!error && response.statusCode == 200) {
-					var obj = JSON.parse(body);
-					var number = Object.keys(obj.query.pages)[0];
-					var result = obj.query.pages[number];
-					console.log(result);
-					callback(null, result);
-				} else {
-					console.log('ERROR: [' + response.statusCode + ']' + url);
-					callback(response.statusCode);
-				}
-			});
-		};
 
 		var user_id = '123';
-		var location_id = '1000';
+		var foursquare_id = '4ef0e7cf7beb5932d5bdeb4e';
 		var firstName = 'Jason';
 		var term = 'Brigham Young University';
 
-		instagram(location_id, function(insta_err, photos){
-			wikipedia(term, function(wiki_err, info){
-				User.update({ 
-					id: user_id, 
-					checkin : {
-						photos : photos,
-						wikipedia: info
-					},
-					firstName : firstName
-				}, function(){});
+		API.instagram(foursquare_id, function(insta_err, photos){
+			API.wikipedia(term, function(wiki_err, info){
+				API.twitter(term, function(twitter_err, tweets){
+					User.update({ 
+						id: user_id, 
+						firstName : firstName,
+						checkin : {
+							photos : photos,
+							wikipedia: info,
+							tweets: tweets
+						}
+					}, function(){});
+
+					console.log('Photos: ', photos);
+					console.log('Info: ', info);
+					console.log('Tweets: ', tweets);
+				});
 			});
 		});
-
 		res.send(200);
 	}
 };
