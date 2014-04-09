@@ -14,7 +14,7 @@ passport.deserializeUser(function(id, done) {
 	User.getById(id, done);
 });
 
-var machine_address = 'http://ec2-107-20-86-23.compute-1.amazonaws.com'
+var machine_address = 'ec2-107-20-86-23.compute-1.amazonaws.com'
 passport.use(new FoursquareStrategy({
 		clientID: FOURSQUARE_CLIENT_ID,
 		clientSecret: FOURSQUARE_CLIENT_SECRET,
