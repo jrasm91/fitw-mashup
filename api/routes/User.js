@@ -34,8 +34,7 @@ module.exports = {
 			id : user.id,
 			photo : user.photo || "",
 			firstName : user.firstName || "",
-			lastName : user.lastName || "",
-			checkins : user.checkins || []
+			lastName : user.lastName || ""
 		};
 		openFile(function(err, users) {
 			if (err) {
@@ -46,9 +45,9 @@ module.exports = {
 					message: 'Already Exists'
 				});
 			} else {
-				users[user.id] = user;
+				users[user.id] = new_user;
 				saveFile(users, function(err) {
-					cb(err, user);
+					cb(err, new_user);
 				});
 			}
 		})

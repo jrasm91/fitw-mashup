@@ -62,10 +62,7 @@ module.exports = {
 							tweets: tweets
 						}
 					}, function(){});
-
-					console.log('Photos: ', photos);
-					console.log('Info: ', info);
-					console.log('Tweets: ', tweets);
+					console.log('Push: ', term);
 				});
 			});
 		});
