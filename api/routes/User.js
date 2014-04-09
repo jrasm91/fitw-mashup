@@ -50,12 +50,7 @@
  				saveFile(users, function(err) {
  					cb(err, new_user);
  				});
- 			} else {
-                users[user.id] = new_user;
-                saveFile(users, function(err) {
-                    cb(err, new_user);
-                });
-            }
+ 			} 
  		});
  	}
  };
