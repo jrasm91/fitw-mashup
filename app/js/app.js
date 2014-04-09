@@ -5,6 +5,7 @@
 var cs462App = angular.module('cs462App', [
 	'ngRoute',
 	'ngSanitize',
+	'ngCookies',
 	'cs462Controllers',
 	'cs462Services',
 ]);
@@ -17,7 +18,7 @@ cs462App.config(['$routeProvider',
 			// controller: 'MainCtrl'
 		}).
 		otherwise({
-			templateUrl: 'partials/users.html',
+			templateUrl: 'partials/home.html',
 			// controller: 'MainCtrl'
 		})
 	}

@@ -28,6 +28,7 @@ module.exports = {
 
 	logout: function(req, res, next) {
 		req.logOut();
+    	res.clearCookie('user_id');
 		res.redirect("/");
 	},
 

@@ -48,9 +48,6 @@ app.get('/api/login/callback', passport.authenticate('foursquare', {
         console.log('Authorized Request')
         res.cookie('user_id', req.user.id)
     }
-    else {
-        res.clearCookie('user_id')
-    }
     res.redirect('/');
 });
 
