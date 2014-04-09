@@ -9,11 +9,6 @@ cs462Services.factory('User', ['$resource',
 	function($resource) {
 		return $resource('/api/user/:id', {
 			id: '@id'
-		}, {
-			getAll: {
-				method: 'GET',
-				isArray: false
-			}
 		});
 	}
 ]);

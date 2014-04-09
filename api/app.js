@@ -42,8 +42,15 @@ app.post('/api/push', UserCtrl.push);
 app.get('/api/logout', UserCtrl.logout);
 app.get('/api/login', passport.authenticate('foursquare'));
 app.get('/api/login/callback', passport.authenticate('foursquare', {
-    failureRedirect: '/#/login'
+    failureRedirect: '/'
 }), function(req, res) {
+    if (req.user && req.user.id){
+        console.log('Authorized Request')
+        res.cookie('user_id', req.user.id)
+    }
+    else {
+        res.clearCookie('user_id')
+    }
     res.redirect('/');
 });
 
