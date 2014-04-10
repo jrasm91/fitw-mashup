@@ -34,23 +34,23 @@ module.exports = {
 
 	push: function(req, res, next) {
 		var obj = JSON.parse(req.body.checkin);
-		var user_id = obj.user.id;
 		var foursquare_id = obj.venue.id;
-		var firstName = obj.user.firstName;
-		var lastName = obj.user.lastName
 		var term =  obj.venue.name;
 
 		API.instagram(foursquare_id, function(insta_err, photos){
 			API.wikipedia(term, function(wiki_err, info){
 				API.twitter(term, function(twitter_err, tweets){
 					User.upsert({ 
-						id: user_id, 
-						firstName : firstName,
-						lastName : lastName,
+						id: obj.user.id, 
+						firstName : obj.user.firstName,
+						lastName : obj.user.lastName,
 						checkin : {
 							photos : photos,
 							wikipedia: info,
-							tweets: tweets
+							tweets: tweets,
+							name: obj.venue.name,
+							shout: obj.venue.shout,
+							createdAt: obj.venue.createdAt
 						}
 					}, function(err){
 						if (err) {

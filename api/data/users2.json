@@ -124,6 +124,9 @@
         "firstName": "Jason",
         "lastName": "Rasmussen",
         "checkin": {
+            "createdAt": 12345,
+            "name" : "Mission Beach",
+            "shout" : "I love the beach!",
             "photos": [
                 "http://distilleryimage8.s3.amazonaws.com/764ae4aec03311e3a2af0002c9549ee0_6.jpg",
                 "http://distilleryimage2.s3.amazonaws.com/665dde2ac02e11e3bee50002c99acbc2_6.jpg",

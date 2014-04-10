@@ -2,15 +2,15 @@
  * Module dependencies.
  */
 
-var express = require('express');
-var UserCtrl = require('./routes/UserCtrl');
-var oauth = require('./routes/oauth');
-var passport = require('passport')
-var https = require('https');
-var http = require('http');
-var path = require('path');
-var fs = require("fs")
-var app = express();
+ var express = require('express');
+ var UserCtrl = require('./routes/UserCtrl');
+ var oauth = require('./routes/oauth');
+ var passport = require('passport')
+ var https = require('https');
+ var http = require('http');
+ var path = require('path');
+ var fs = require("fs")
+ var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 443);
@@ -50,6 +50,12 @@ app.get('/api/login/callback', passport.authenticate('foursquare', {
     }
     res.redirect('/#/account');
 });
+
+// app.get('/api/login', function(req, res){
+//     console.log('Authorized Request')
+//     res.cookie('user_id', 77959705)
+//     res.redirect('/#/account');
+// });
 
 https.createServer({
     cert: fs.readFileSync('./ssl/certificate.pem'),

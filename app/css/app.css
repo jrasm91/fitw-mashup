@@ -30,22 +30,23 @@ img {
 }
 
 .foursquare-box {
-  background-color: yellow;
+  /*background-color: yellow;*/
   height: 100px;
 }
 
 .twitter-box {
-  background-color: #009900;
-  height: 300px;
+  /*background-color: #009900;*/
+  min-height: 300px;
+  padding-right: 25px;
 }
 
 .wikipedia-box {
-  background-color: #0099FF;
-  height: 300px;
+  /*background-color: #0099FF;*/
+  min-height: 300px;
 }
 
 .instagram-box {
-  background-color: #660033;
+  /*background-color: #660033;*/
   height: 200px;
 }
 
