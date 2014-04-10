@@ -49,8 +49,8 @@ module.exports = {
 							wikipedia: info,
 							tweets: tweets,
 							name: obj.venue.name,
-							shout: obj.venue.shout,
-							createdAt: obj.venue.createdAt
+							shout: obj.shout,
+							createdAt: obj.createdAt
 						}
 					}, function(err){
 						if (err) {
